@@ -30,8 +30,8 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    buildFeatures{
-        viewBinding=true
+    buildFeatures {
+        viewBinding = true
     }
 }
 def retrofitVersion = '2.3.0'
@@ -54,4 +54,10 @@ dependencies {
     implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
     implementation "io.reactivex.rxjava2:rxandroid:$rxJavaVersion"
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
+
+
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
+    implementation('androidx.lifecycle:lifecycle-runtime-ktx:2.5.1')
+
+
 }
