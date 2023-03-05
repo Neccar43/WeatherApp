@@ -14,6 +14,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import kotlin.math.roundToLong
 
 private val BASE_URL = "https://api.openweathermap.org/data/2.5/"
 private lateinit var binding: ActivityMainBinding
@@ -105,7 +106,7 @@ class MainActivity : AppCompatActivity() {
                             condition = weather.main
 
                         }
-                        binding.tempetureText.text = temp.toString()
+                        binding.temperatureText.text = String.format("%.1f", temp)+"°"
 
                         var havaDurumu = ""
                         val image = binding.coundationImage
